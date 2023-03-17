@@ -1,0 +1,26 @@
+/* pages/home/home.wxss */
+.swiper-container{
+  height: 300rpx;
+  padding: 15px;
+}
+h-item{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.item{
+  height: 100%;
+  line-height: 300rpx;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.list-container{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,0 +1,36 @@
+<!--pages/createTeam/createTeam.wxml-->
+<view>
+  <view class="view-contain">
+    <text class="text">队伍名称</text>
+    <input class="input" auto-focus placeholder="请输入队伍名称" model:value="{{team_name}}" bindinput="getTeamName" />
+  </view>
+  <view class="view-contain">
+    <text class="text">竞赛名称</text>
+    <input class="input" auto-focus placeholder="请输入竞赛名称" model:value="{{comp_name}}" bindinput="getCompName" />
+  </view>
+  <view auto-height="true" class="view-contain" style="min-height: 80px; height: auto;">
+    <text class="text">队伍简介&基本需求</text>
+    <textarea auto-height="true" class="input" 
+    placeholder="请输入队伍简介和基本需求"
+    bindinput="getTeamDesc"
+    value="{{team_desc}}">
+  </textarea>
+  </view>
+  <!-- <view class="view-contain">
+    <text wx:if="{{need_list.length !== 0}}"  class="text">队伍需求</text>
+    <view wx:for="{{need_list}}" wx:key="index">
+      <view class="view-contain">
+        <text class="text">需求{{index + 1}}</text>
+        <view wx:for="{{need_list[index]}}" wx:for-item="item">
+          <view class="tag">{{item.level}}{{item.tag}}</view>
+        </view>
+      </view>
+    </view>
+    <button size="default" style="margin-left: 0px; margin-right: 0px; width: 100%; background-color: #33ccff;font-size: 35rpx;" 
+    type="primary" bindtap='addNeed'>添加需求</button>
+    
+  </view> -->
+
+  <button class="createButton" bindtap="addNeed">创建</button>
+</view>
+

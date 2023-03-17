@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "npm": "^9.1.1"
+  },
+  "name": "algorithm",
+  "version": "1.0.0",
+  "main": "test.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kzj",
+  "license": "ISC",
+  "description": ""
+}

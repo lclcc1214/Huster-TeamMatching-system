@@ -1,0 +1,97 @@
+.page-container{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.team-text{
+  text-indent: 52rpx;
+  width: 100%;
+  word-break: break-all;
+}
+.button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.delete-button{
+  position: relative;
+  left: 0rpx;
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-around;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  background:#1989fa;
+  width:200rpx;
+  height: 70rpx;
+}
+.add-button{
+  display: flex;
+  position: relative;
+  left: 30rpx;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-around;
+  border-radius: 10rpx;
+  background:#1989fa;
+  width:200rpx;
+  height: 70rpx;
+}
+.skill-title{
+  height: 200rpx;
+}
+.skill-title-text{
+  color: #1989fa;
+}
+.member-item{
+  display: flex;
+  flex-direction: row;
+}
+.mem-add-button{
+  display: flex;
+  flex-direction:row;
+  position: relative;
+  left: 440rpx;
+  align-items:center;
+  justify-content: space-around;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  background:#1989fa;
+  height: 70rpx;
+  width:180rpx;
+  margin-bottom: 10rpx;
+}
+.req-button{
+  margin-top: 40rpx;
+}
+.delete-team-button{
+  display: flex;
+  flex-direction:row;
+  position: relative;
+  left: 200rpx;
+  align-items:center;
+  justify-content: space-around;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-right: 20rpx;
+  background:#bdb5b5;
+  height: 70rpx;
+  width:180rpx;
+}
+.drop-team-button{
+  display: flex;
+  flex-direction:row;
+  position: relative;
+  left: 200rpx;
+  align-items:center;
+  justify-content: space-around;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-right: 20rpx;
+  background:#bdb5b5;
+  height: 70rpx;
+  width:180rpx;
+}

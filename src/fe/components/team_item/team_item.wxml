@@ -1,0 +1,11 @@
+<view class="item-wrapper">
+  <view class="item-info">
+    <text class="item-name">队名: {{name}}</text>
+    <view class="item-title">竞赛: {{title}}</view>
+  </view>
+  <view class="item-button">
+    <button size="mini" bindtap="onClick1">
+      <text class="item-info-more">查看详情</text>
+    </button>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "usingComponents": {
+    "van-image":"/dist/image/index",
+    "van-icon":"/dist/icon/index",
+    "van-collapse": "/dist/collapse/index",
+    "van-collapse-item": "/dist/collapse-item/index",
+    "van-tag": "/dist/tag/index"
+  }
+}

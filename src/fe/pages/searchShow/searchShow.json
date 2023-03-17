@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索结果",
+  "usingComponents": {
+    "home-item":"/components/home_item/home_item",
+    "m-search":"/dist/search/index"
+  }
+}

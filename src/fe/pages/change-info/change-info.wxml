@@ -1,0 +1,86 @@
+<view class="page-container">
+  <view class="field-container">
+    <view class="info-title">
+      <van-icon name="contact" color="#4295ff" />
+      <view style="font-size: 18px;width:120px;color: #4295ff;padding-left:5px;">身份信息</view>
+      <view style="background-color: #4295ff; width: 100%; height: 5rpx;"></view>
+    </view>
+    <van-field label="姓名" model:value="{{ name }}" error-message='{{isName?"":"姓名不能为空"}}' placeholder="请输入姓名" border="{{ false }}" bind:change="onChangeName" />
+    <view class="drop-container">
+      <view class="drop-menu">性别</view>
+      <view class='select_box'>
+        <view class='select' catchtap='selectTap1'>
+          <view class='select_text'><text class="a">{{selectData1[index1]}}</text></view>
+          <image class='select_img {{show1&&"select_img_rotate"}}' src='/imgs/gobottom.png'></image>
+        </view>
+        <view class='option_box' style='height:{{show1?(selectData1.length>5?500:selectData1.length*100):0}}rpx;'>
+          <text class='option' style='{{index1==selectData1.length-1&&"border:0;"}}' wx:for='{{selectData1}}' wx:key='this' data-index1='{{index}}' catchtap='optionTap1'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 学院 -->
+    <view class="drop-container">
+      <view class="drop-menu">院系</view>
+      <view class='select_box'>
+        <view class='select' catchtap='selectTap2'>
+          <text class='select_text'>{{selectData2[index2]}}</text>
+          <image class='select_img {{show2&&"select_img_rotate"}}' src='/imgs/gobottom.png'></image>
+        </view>
+        <view class='option_box' style='height:{{show2?(selectData2.length>5?500:selectData2.length*60):0}}rpx;'>
+          <text class='option' style='{{index2==selectData2.length-1&&"border:0;"}}' wx:for='{{selectData2}}' wx:key='this' data-index2='{{index}}' catchtap='optionTap2'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="info-title">
+      <van-icon name="phone-o" color="#4295ff" />
+      <view style="font-size: 18px;width:120px;color: #4295ff;margin-left: 5px;">联系方式</view>
+      <view style="background-color: #4295ff; width: 100%; height: 5rpx;"></view>
+    </view>
+    <van-field label="手机号" type="tel" error-message='{{isPhone?"":"手机号码格式错误"}}' model:value="{{ phone }}" placeholder="请输入手机号" border="{{ false }}" bind:change="onChangePhone" />
+    <van-field label="qq" model:value="{{ qq }}" error-message='{{isqq?"":"qq号码格式错误"}}' placeholder="请输入qq号" border="{{ false }}" bind:change="onChangeQQ" />
+    <view class="info-title">
+      <van-icon name="cluster-o" color="#4295ff" />
+      <view style="font-size: 18px;width:110px;color: #4295ff;margin-left: 10px;">技术栈</view>
+      <view style="background-color: #4295ff; width: 100%; height: 5rpx;"></view>
+    </view>
+    <view class="skill-container">
+      <view  class="skilllist">  
+          <view class="myskill">我的技术</view>
+          <picker style="width:40%;margin-bottom: 8px;" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="add-button">
+              <view style="color:aliceblue;">添加技术栈</view>
+              <view class="iconfont icon-tianjia-copy-copy"  ></view>
+            </view>
+          </picker>
+      </view>
+      <van-dialog id="van-dialog" />
+      <view style="background-color: #4295ff; width: 100%; height: 5rpx;margin-bottom:5px;"></view>
+      <van-row class="skill-title">
+        <van-col span="4"  offset="1" class="skill-title-text">类别</van-col>
+        <van-col span="7" offset="4" class="skill-title-text">技术</van-col>
+        <van-col span="4" offset="1" class="skill-title-text">级别</van-col>
+      </van-row>
+      <view style="background-color: #4295ff; width: 100%; height: 5rpx;margin-top:5px;margin-bottom:5px;"></view>
+      <!-- <view wx:for="{{list}}" class="list-container">
+        <view class="list-item skilltype">{{item.skilltype}}</view>
+        <view class="list-item skill">{{item.skill}}</view>
+        <view class="list-item level">{{item.level}}</view>
+        <view class="iconfont icon-shanchu" id="{{item.skill}}" bindtap="deleteSkill"></view>
+      </view> -->
+      <view class="list-height-container">
+        <van-row wx:for="{{list}}" class="list-container">
+          <van-col span="7"  offset="1" class="list-item skilltype">{{item.tech_class}}</van-col>
+          <van-col span="6" offset="1" class="list-item skill">{{item.tech_name}}</van-col>
+          <van-col span="5"  offset="2" class="list-item level">{{item.tech_level === 0?'入门':item.tech_level===1?'熟练':'精通'}}</van-col>
+          <van-col  class="iconfont icon-shanchu" id="{{item.tech_name}}" bindtap="deleteSkill"></van-col>
+          <view style="background-color: #c4c7ce; width: 100%; height: 5rpx;margin-top:5px;margin-bottom:5px;"></view>
+        </van-row>
+      </view>
+    </view>
+    <view class="item-button">
+    <button class="submit-button" size="mini" bindtap="onSubmit">
+      <text class="item-info-more">确认修改</text>
+    </button>
+  </view>
+  </view>
+</view>

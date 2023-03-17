@@ -1,0 +1,20 @@
+<view class="searchbar">
+  <view class="content">
+    <van-icon name="search" class="search-icon"/>
+    <input 
+      bindinput="handleInput"
+      bindconfirm="handleConfirm"
+      type="text"
+      value="{{inputValue}}" 
+      placeholder="{{placeholder}}" 
+      class="input"
+      confirm-type="search"
+    ></input>
+    <van-icon 
+      wx:if="{{inputValue}}"
+      name="clear" 
+      bind:click="handleDeleteClick"
+      class="delete-icon" />
+  </view>
+  <view wx:if="{{inputValue}}" bindtap="handleTextbtnClick" class="text-btn">取消</view>
+</view>

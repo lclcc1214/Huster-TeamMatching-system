@@ -1,0 +1,66 @@
+.head-photo{
+  width:"30px";
+  height:"30px";  
+  border-radius: 50%;
+}
+.info-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.person-info{
+  display: flex;
+  /* align-items: center; */
+}
+.head-photo{
+  padding:20px;
+}
+.person-name{
+  font-size: large;
+  font-weight: 550;
+  width: 100%;
+  margin-top: 80rpx;
+}
+.item-button{
+  margin-left:280rpx;
+  display: flex;
+  flex-direction:row;
+  align-items:flex-end;
+  border-radius: 5px;
+}
+button{
+  background:#1989fa;
+  border-radius: 5px;
+}
+.item-info-more{
+  font-size: smaller;
+  border:1px;
+  color:#fff;
+  margin-right: 5px;
+}
+.skills{
+  margin: 5px;
+}
+.color-container{
+  display: flex;
+  flex-direction:row;
+}
+.color-item{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-right: 5px;
+}
+.tag-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.tag-container>van-tag{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}

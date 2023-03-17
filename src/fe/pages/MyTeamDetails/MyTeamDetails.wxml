@@ -1,0 +1,84 @@
+<view class="page-container">
+  <van-dialog id="van-dialog" />
+  <van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+    <van-collapse-item title="队伍介绍" name="1" icon="contact">
+      <view class="name">队名：{{team_name}}</view>
+      <view class="gender">比赛：{{comp_name}}</view>
+      <view class="gender">队伍简介：
+        <view class="team-text">{{team_req}}</view>
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="招募截止时间" name="2" icon="calendar-o">
+      <picker wx:if="{{ChangeAutority}}" style="width:100%;margin-bottom: 8px;" mode="multiSelector" bindchange="bindTimePickerChange" bindcolumnchange="bindTimePickerColumnChange" value="{{timeIndex}}" range="{{timeArray}}">
+              <view style="display: flex; justify-content: space-between;">
+                <text class="qq-num">截止时间：{{ddl_show}}</text>
+                <text style="color:rgb(123, 191, 252);">修改</text>
+              </view>
+            </picker>
+      
+    </van-collapse-item>
+    <van-collapse-item title="技术栈需求" name="3" icon="cluster-o">
+      <van-collapse accordion value="{{ activeNameReq }}" bind:change="onChangeReq">
+        <van-collapse-item wx:for="{{requireList}}" title="队员{{index+1}} 需求">
+          <view wx:if="{{ChangeAutority}}" class="button-container">
+            <view class="delete-button" bindtap="deleteRequire">
+              <view style="color:aliceblue;">删除该需求</view>
+            </view>
+            <picker wx:if="{{ChangeAutority}}" style="width:40%;margin-bottom: 8px;" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+              <view class="add-button">
+                <view style="color:aliceblue;">添加技术栈需求</view>
+              </view>
+            </picker>
+          </view>
+          <view style="background-color: #4295ff; width: 100%; height: 5rpx;margin-bottom:5px;"></view>
+          <van-row class="skill-title">
+            <van-col span="4" offset="1" class="skill-title-text">类别</van-col>
+            <van-col span="7" offset="4" class="skill-title-text">技术</van-col>
+            <van-col span="4" offset="1" class="skill-title-text">级别</van-col>
+          </van-row>
+          <view style="background-color: #4295ff; width: 100%; height: 5rpx;margin-top:5px;margin-bottom:5px;"></view>
+          <view class="list-height-container">
+            <van-row wx:for="{{requireList[index]}}" class="list-container">
+              <van-col span="7" offset="1" class="list-item skilltype">{{item.skilltype}}</van-col>
+              <van-col span="6" offset="1" class="list-item skill">{{item.skill}}</van-col>
+              <van-col span="5" offset="2" class="list-item level">{{item.level}}</van-col>
+              <van-col class="iconfont icon-shanchu" id="{{item.skill}}" bindtap="deleteSkill"></van-col>
+              <view style="background-color: #c4c7ce; width: 100%; height: 5rpx;margin-top:5px;margin-bottom:5px;"></view>
+            </van-row>
+          </view>
+        </van-collapse-item>
+        <view wx:if="{{ChangeAutority}}" class="mem-add-button req-button" bindtap="addReq">
+          <view style="color:aliceblue;">添加队员需求</view>
+        </view>
+      </van-collapse>
+    </van-collapse-item>
+    <van-collapse-item title="队员信息(点击姓名跳转主页)" name="4" icon="friends-o">
+      <van-field wx:if="{{ChangeAutority}}" label="添加成员学号" model:value="{{ Stunum }}" placeholder="请输入学号" border="{{ false }}" />
+      <view wx:if="{{ChangeAutority}}" class="mem-add-button" bindtap="addMember">
+        <view style="color:aliceblue;">添加成员</view>
+      </view>
+      <view style="background-color: #4295ff; width: 100%; height: 5rpx;margin-bottom:5px;"></view>
+      <van-row class="skill-title">
+        <van-col span="2" offset="1" class="skill-title-text">身份</van-col>
+        <van-col span="7" offset="1" class="skill-title-text">姓名</van-col>
+        <van-col span="10" offset="1" class="skill-title-text">学院</van-col>
+      </van-row>
+      <view style="background-color: #4295ff; width: 100%; height: 5rpx;margin-top:5px;margin-bottom:5px;"></view>
+      <view class="list-height-container">
+        <van-row wx:for="{{memberList}}" class="list-container">
+          <van-col span="2" offset="1" class="list-item skilltype">{{item.level}}</van-col>
+          <van-col span="7" offset="1" class="list-item skill" style="color: #4295ff;" id="{{index}}" bindtap="clickName">{{item.name}}</van-col>
+          <van-col span="10" offset="1" class="list-item level">{{item.acedemy}}</van-col>
+          <van-col offset="1" class="iconfont icon-shanchu" id="{{index}}" bindtap="deleteMember"></van-col>
+          <view style="background-color: #c4c7ce; width: 100%; height: 5rpx;margin-top:5px;margin-bottom:5px;"></view>
+        </van-row>
+      </view>
+      <view wx:if="{{ChangeAutority && user_id === team_leader_id}}" class="delete-team-button" bindtap="deleteTeam">
+        <view style="color:aliceblue;">解散队伍</view>
+      </view>
+      <view wx:if="{{ChangeAutority && user_id !== team_leader_id}}" class="drop-team-button" bindtap="dropTeam">
+        <view style="color:aliceblue;">退出队伍</view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+</view>

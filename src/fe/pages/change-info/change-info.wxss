@@ -1,0 +1,250 @@
+page {
+  background-color: #f7f8fa;
+  height: auto;
+  min-height: 100%;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  min-height: 100%;
+}
+
+.field-container {
+  background-color: white;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  height: auto;
+  min-height: 100%;
+}
+
+van-sidebar {
+  height: 100%;
+  border-style: solid;
+  border-top-width: 0px;
+  border-right-width: 2px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-color: #cbcbcb;
+}
+
+van-field {
+  width: 50%;
+}
+
+van-tag {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.tag-container {
+  padding-left: 50px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 50px 50px 50px;
+}
+
+.tag {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.tag-value {
+  width: 73px;
+  color: #1989fa;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 4px 8px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  position: relative;
+  margin: 0;
+  border: solid;
+  border-width: 1px;
+}
+
+page {
+  background: #f3f7f7;
+}
+
+.select_box {
+  background: #fff;
+  width: 80%;
+  position: relative;
+}
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70rpx;
+  border: 1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.select_text {
+  font-size: 30rpx;
+  /* flex: 1; */
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.select_img {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.select_img_rotate {
+  transform: rotate(180deg);
+}
+
+.option_box {
+  position: absolute;
+  top: 70rpx;
+  width: 100%;
+  /* border:1px solid #efefef; */
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+  z-index: 999;
+}
+
+.option {
+  background-color: #f3f7f7;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+
+.drop-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  line-height: 70px;
+  padding: 10px;
+  padding-left: 14px;
+}
+
+.drop-menu {
+  color: #646566;
+  line-height: 40rpx;
+  font-size: 14px;
+  padding-left: 4rpx;
+}
+
+.info-title {
+
+  padding-top: 40rpx;
+  padding-left: 20rpx;
+  padding-right: 40rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*  */
+.view-btn{
+  text-align: center;
+  margin: 20rpx;
+}
+
+.view-btn-add{
+  margin:0 50rpx;
+}
+
+.picker-view {
+  margin: 10rpx 25rpx;
+  font-size: 14px;
+}
+.skill-container{
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.picker-view-item{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill-title{
+  height: 200rpx;
+}
+.skill-title-text{
+  color: #1989fa;
+}
+.skill{
+  width: 160rpx;
+}
+.skilllist{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.myskill{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.add-button{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-around;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  background:#1989fa;
+  width:100%;
+  height: 70rpx;
+}
+.list-container{
+  font-size: 13px;
+}
+.list-height-container{
+  height:230px;
+  overflow: scroll;
+  margin-bottom: 10px;
+}
+.item-button{
+  position: relative;
+  display: flex;
+  flex-direction:row;
+  align-items:flex-end;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.item-info-more{
+  font-size: medium;
+  border:1px;
+  color:#fff;
+}
+.submit-button{
+  background:#1989fa;
+  border-radius: 5px;
+}

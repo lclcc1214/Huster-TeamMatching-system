@@ -1,0 +1,18 @@
+{
+  "navigationBarTitleText": "修改个人信息",
+  "usingComponents": {
+    "van-sidebar": "/dist/sidebar/index",
+    "van-sidebar-item": "/dist/sidebar-item/index",
+    "van-field": "/dist/field/index",
+    "van-icon": "/dist/icon/index",
+    "van-dropdown-menu": "/dist/dropdown-menu/index",
+    "van-dropdown-item": "/dist/dropdown-item/index",
+    "van-cell": "/dist/cell/index",
+    "van-cell-group": "/dist/cell-group/index",
+    "van-action-sheet": "/dist/action-sheet/index",
+    "van-area": "/dist/area/index",
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-dialog": "/dist/dialog/index"
+  }
+}

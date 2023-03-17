@@ -1,0 +1,7 @@
+{  
+  "navigationBarTitleText": "我的队伍",
+  "usingComponents": {
+    "team_item":"/components/team_item/team_item",
+    "van-icon": "/dist/icon/index"
+  }
+}

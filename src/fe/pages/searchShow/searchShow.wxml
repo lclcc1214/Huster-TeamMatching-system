@@ -1,0 +1,9 @@
+<!--pages/searchShow/searchShow.wxml-->
+<view>
+  <m-search value="{{ value }}" placeholder="请输入搜索关键词" bind:search="handleSearch"></m-search>
+</view>
+<view class="list-container">
+  <view wx:for="{{ list }}" wx:key="index" wx:for-item="team">
+    <home-item wx:if="{{index<limit}}"  class="home-item" title="{{team.comp_name}}" name="{{team.team_name}}" ddl="{{team.ddl_time}}" leftDate="{{team.leftDate}}" tid="{{team_id_list[index].id}}"></home-item>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+/* pages/searchShow/searchShow.wxss */
+.home-item{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 40rpx;
+}
+.list-container{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}

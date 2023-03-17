@@ -1,0 +1,61 @@
+/**app.wxss**/
+page{
+  background-color: #f3f3fa;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.tabber-container{
+  height: 50px;
+}@font-face {
+  font-family: "iconfont"; /* Project id 3758788 */
+  src: url('//at.alicdn.com/t/c/font_3758788_zscwktm94fr.woff2?t=1668002989704') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3758788_zscwktm94fr.woff?t=1668002989704') format('woff'),
+       url('//at.alicdn.com/t/c/font_3758788_zscwktm94fr.ttf?t=1668002989704') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shanchu:before {
+  content: "\e643";
+}
+
+.icon-tianjia-copy-copy:before {
+  content: "\e7e3";
+}
+
+.icon-tianjia:before {
+  content: "\e657";
+}
+
+.icon-key:before {
+  content: "\e7e1";
+}
+
+
+
+.icon-shanchu:before {
+  content: "\e643";
+}
+
+.icon-tianjia:before {
+  content: "\e657";
+}
+
+.icon-key:before {
+  content: "\e7e1";
+}
+
+

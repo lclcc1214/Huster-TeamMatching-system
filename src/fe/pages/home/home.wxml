@@ -1,0 +1,26 @@
+<!--pages/home/home.wxml-->
+<view>
+  <!-- <search-bar placeholder="请输入搜索关键词" bind:handleSearch="handleSearch" /> -->
+<m-search   value="{{ value }}" placeholder="请输入搜索关键词" bind:focus="focus"></m-search>
+</view>
+<swiper class="swiper-container" autoplay="true" circular="true" interval="3500" indicator-dots>
+  <swiper-item>
+    <image src="/imgs/A.png" class="item" ></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/imgs/B.png" class="item" ></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/imgs/C.png" class="item" ></image>
+  </swiper-item>
+</swiper>
+<view wx:for="{{team_list}}" class="list-container">
+  <h-item wx:if="{{index < limit}}" title="{{item.comp_name}}" name="{{item.team_name}}" ddl="{{item.ddl_time}}" leftDate="{{item.leftDate}}" tid="{{team_info[index].id}}"></h-item>
+</view> 
+<view class="tabber-container">
+  <van-tabbar active="{{ active }}" bind:change="onClick">
+  <van-tabbar-item icon="home-o">主页</van-tabbar-item>
+  <van-tabbar-item icon="friends-o">我的队伍</van-tabbar-item>
+  <van-tabbar-item icon="user-circle-o">个人</van-tabbar-item>
+  </van-tabbar>
+</view>

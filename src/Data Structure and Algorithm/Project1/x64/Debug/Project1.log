@@ -1,0 +1,35 @@
+﻿生成启动时间为 2022/11/9 14:58:47。
+日志记录详细程度设置为: Normal。     1>项目“C:\Users\fwkzj\Desktop\Project1\Project1.vcxproj”在节点 2 上(Build 个目标)。
+     1>D:\Visual Studio\vs\ide\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: 中间目录(x64\Debug\)包含从另一个项目(Data Structure and Algorithm.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+     1>InitializeBuildStatus:
+         正在创建“x64\Debug\Project1.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Visual Studio\vs\ide\VC\Tools\MSVC\14.31.31103\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt main.cpp
+         main.cpp
+     1>C:\Users\fwkzj\Desktop\Project1\main.cpp(79,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+       Link:
+         D:\Visual Studio\vs\ide\VC\Tools\MSVC\14.31.31103\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\fwkzj\Desktop\Project1\x64\Debug\Project1.exe" /INCREMENTAL /ILK:"x64\Debug\Project1.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\fwkzj\Desktop\Project1\x64\Debug\Project1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\fwkzj\Desktop\Project1\x64\Debug\Project1.lib" /MACHINE:X64 x64\Debug\I_Person.obj
+         x64\Debug\main.obj
+         x64\Debug\search.obj
+         x64\Debug\sort.obj
+         Project1.vcxproj -> C:\Users\fwkzj\Desktop\Project1\x64\Debug\Project1.exe
+       FinalizeBuildStatus:
+         正在删除文件“x64\Debug\Project1.tlog\unsuccessfulbuild”。
+         正在对“x64\Debug\Project1.tlog\Project1.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\fwkzj\Desktop\Project1\Project1.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+       “C:\Users\fwkzj\Desktop\Project1\Project1.vcxproj”(Build 目标) (1) ->
+       (PrepareForBuild 目标) -> 
+         D:\Visual Studio\vs\ide\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: 中间目录(x64\Debug\)包含从另一个项目(Data Structure and Algorithm.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+
+
+       “C:\Users\fwkzj\Desktop\Project1\Project1.vcxproj”(Build 目标) (1) ->
+       (ClCompile 目标) -> 
+         C:\Users\fwkzj\Desktop\Project1\main.cpp(79,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+
+    2 个警告
+    0 个错误
+
+已用时间 00:00:01.29

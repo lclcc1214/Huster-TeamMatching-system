@@ -1,0 +1,19 @@
+.list-container{
+  margin: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+team_item{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.add-team{
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  z-index: 9999;
+}
+.add-icon{
+  color: rgb(87, 184, 240);
+  opacity: 0.85;
+}

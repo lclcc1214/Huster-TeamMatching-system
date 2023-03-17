@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "BestMatch",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "m-search":"/dist/search/index",
+    "van-rate": "/dist/rate/index",
+    "h-item":"/components/home_item/home_item",
+    "search-bar":"/components/search_bar/search_bar"
+
+  }
+}

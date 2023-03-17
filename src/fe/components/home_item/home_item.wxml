@@ -1,0 +1,18 @@
+<view class="item-wrapper">
+  <view class="item-info">
+    <view class="item-title">竞赛: {{title}}</view>
+    <text class="item-name">队名: {{name}}</text>
+    <view>
+      <text class="item-name">DDL: {{ddl}}  </text>
+      <text class="left-date" wx:if="{{leftDate * 1 >= 0}}">剩余{{leftDate}}天</text>
+      <text class="out-of-date" wx:else>已超时</text>
+    </view>
+    
+
+  </view>
+  <view class="item-button">
+    <button class="button" size="mini" bindtap="onClick">
+      <text class="item-info-more" >了解更多</text>
+    </button>
+  </view>
+</view>
